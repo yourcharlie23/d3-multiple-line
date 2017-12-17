@@ -1,0 +1,141 @@
+body {
+  font: 16px Curator;
+  color: #333333;
+
+  .default-color {
+    color: #333333;
+  }
+
+  main {
+    padding: 10vh 10vw;
+    max-width: 750px
+  }
+
+  .title {
+    font-size: 21px;
+    font-weight: bold;
+    padding-bottom: 30px;
+  }
+  .note {
+    font-size: 13px;
+    font-style: italic;
+    font-weight: normal;
+    padding: 20px 0 10px;
+  }
+  .chart-info {
+    position: relative;
+    width: 100%;
+  }
+  .inline-b {
+    display: inline-block;
+  }
+  ul.legends-list {
+    font-size: 13px;
+    font-weight: bold;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    li {
+      &:before {
+        content: '-';
+        font-size: 40px;
+        font-weight: normal;
+        position: relative;
+        top: 5px;
+        padding-right: 5px;
+      }
+      &.exclude {
+        opacity: .4;
+      }
+      & .title {
+        font-size: 13px;
+        color: #333333;
+        padding: 0;
+      }
+      & .desc {
+        font-size: 13px;
+        font-weight: normal;
+        color: #333333;
+        padding-left: 20px;
+      }
+    }
+  }
+}
+
+#chart {
+  padding-top: 30px;
+  width: 100%;
+  height: 100%;
+  position: relative;
+  font-size: 13px;
+  display: inline-block;
+  background-color: #fff;
+  min-height: 280px;
+  min-width: 270px;
+}
+
+.axis path,
+.axis line {
+  fill: none;
+  stroke: #000;
+  shape-rendering: crispEdges;
+}
+
+.y.axis path {
+  display: none;
+}
+
+.y .tick line {
+  stroke: #e4e2e2;
+}
+
+#tooltip {
+  position: absolute;
+  border: 2px solid #808080;
+  padding: 5px;
+  display: none;
+  background-color: #fff;
+  max-width: 100px;
+}
+
+.row {
+  display: table;
+  width: 100%;
+}
+[class*="col-"] {
+  width: 100%;
+  display: block;
+  height: 100%;
+  vertical-align:top;
+}
+.col-1 {display: inline-table; width: 8.33%;}
+.col-2 {display: inline-table; width: 16.66%;}
+.col-3 {display: inline-table; width: 25%;}
+.col-4 {display: inline-table; width: 33.33%;}
+.col-5 {display: inline-table; width: 41.66%;}
+.col-6 {display: inline-table; width: 50%;}
+.col-7 {display: inline-table; width: 58.33%;}
+.col-8 {display: inline-table; width: 66.66%;}
+.col-9 {display: inline-table; width: 75%;}
+.col-10 {display: inline-table; width: 83.33%;}
+.col-11 {display: inline-table; width: 91.66%;}
+.col-12 {display: inline-table; width: 100%;}
+
+@media (min-width: 450px) {
+  #chart {
+    width: 83%;
+    transition: all 1s;
+    -moz-transition: all 1s;
+    -webkit-transition: all 1s;
+
+  }
+  #legends {
+    width: 17%;
+    // float: right;
+    position: absolute;
+    right: 0;
+    ul li {
+      margin-right: 20px;
+    }
+  }
+}
