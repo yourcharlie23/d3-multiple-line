@@ -1,5 +1,5 @@
 
-// Define margins 
+// Define margins
 var margin = {top: 20, right: 20, bottom: 30, left: 50},
 width = parseInt(d3.select('#chart').style('width')) - margin.left - margin.right,
 height = parseInt(d3.select('#chart').style('height')) - margin.top - margin.bottom;
